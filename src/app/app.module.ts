@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JwtComponent } from './parse-jwt/jwt.component';
+import { JwtService } from './parse-jwt/jwt.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JwtComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,    
     AppRoutingModule
   ],
-  providers: [],
+  providers: [JwtService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
